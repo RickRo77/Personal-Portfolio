@@ -1,0 +1,358 @@
+html
+{
+    scroll-behavior: smooth;
+}
+#header
+{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #9300b8; */
+    background-image: url('./src/4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container
+{
+    padding: 10px 10%;
+    width: 100vw;
+    color: #fff;
+    /* background-color: aqua; */
+}
+#services,#projects,#contact
+{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#dropdown
+{
+    display: none;
+}
+.logo
+{
+    width: 140px;
+}
+nav ul li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+}
+nav ul li a
+{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+}
+nav ul li a::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #00aeff;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.5s;
+}
+nav ul li a:hover::after
+{
+    width: 100%;
+}
+.headertext
+{
+    /* margin-top: 20%; */
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 30px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+body h1
+{
+    font-size: 60px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+body h2
+{
+    font-size: 50px;
+    font-weight: bold;
+}
+body p
+{
+    font-size: larger;
+}
+.headertext h1 span
+{
+    color: #ffee00;
+}
+
+/* ---------------About--------------- */
+
+#about
+{
+    /* padding: 80px 0; */
+    padding-top: 5%;
+    background-image: url('./src/copy.jpg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    padding-bottom: 5%; 
+    height: 90vh; 
+    padding-left: 10vw;
+}
+/* .row
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+
+.card
+{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 3px 3px 10px 0px #000000;
+    height: 55vh;
+    width: 60vw;
+    margin: 2%;
+    /* background-image: url('./src/pink.jpg'); */
+    background-color: rgb(250, 76, 177);
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    color: #000000; 
+}
+.card:hover
+{
+    background-color: rgb(255, 36, 164);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card img
+{
+    border-radius: 4%;
+    height: 100%; 
+    width:60%;
+}
+.sideText
+{
+    padding: 2%;
+}
+.card.visible
+{
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* .card2
+{
+    height: 40vh;
+    width: 20vw;
+    background-color: aqua;
+    margin: 2%;
+    border-radius: 4%;
+}
+.card2 img
+{
+    height: 100%;
+}
+/* .card2:hover img
+{
+    transition: 0.5s;
+    height: 80%;
+} */
+/* .card2 p 
+{
+    height: 0;
+    visibility: hidden;
+}
+.card2:hover p
+{
+    height: auto;
+    visibility: visible;
+    transition: 0.5s;
+    z-index: 2;
+    align-self: flex-end;
+}  */
+
+.card2 {
+    position: relative;
+    /* width: 100%; */
+    height: 40vh;
+    width: 25vw;
+    margin: 1%;
+    border-radius: 4%; /* Adjust as needed */
+    overflow: hidden;
+    box-shadow:2px 2px 9px black
+}
+.card2:hover
+{
+    box-shadow:0 0 60px #00e1ff;
+    transition: 1s;
+    cursor: pointer;
+    /* box-shadow:4px 4px 9px black */
+    /* text-shadow: #000000; */
+}
+.card2:hover img
+{
+    transform:scale(1.05);
+    transition: 0.5s;
+}
+.card2 img {
+    width: 100%;
+    height: 100%;
+    /* object-fit:fill */
+}
+
+.card2 p {
+    /* height: 20%; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.726); /* Semi-transparent background */
+    font-weight: 500;
+    color: white;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.card2:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+#services
+{
+    background-image: linear-gradient(180deg, #111c30, #181a22);
+    background-blend-mode:darken;
+    background-size: cover;
+}
+#projects
+{ 
+    display: flex; align-items:center; flex-direction: column;
+    background-image: url('./src/2.jpg'),url('./src/adad.png'); 
+    background-blend-mode:lighten;
+    background-size: cover;
+}
+
+
+@media (max-width: 500px)
+{
+    nav ul
+    {
+        display: none;
+    }
+    #dropdown
+    {
+        display: block;
+    }
+    .headertext
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10vw;
+    }
+    #about
+    {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0vw;
+        align-items: center;
+    }
+    #cardscontainer
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }   
+    .card2
+    {
+        width: 75vw;
+        height: 20vh;
+    }
+    .card.visible
+    {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 80vw;
+    }
+    .card img
+    {
+        border-radius: 4%;
+        height: 30%; 
+        width:100%;
+    }
+}
+
+
+
+.contact-form {
+    backdrop-filter: blur(7px);
+    padding: 20px;
+    border-radius: 8px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40vw;
+    color:#dce2ff;
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #ffffff00;
+}
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+.form-group button {
+    background-color: #dce2ff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px 1px #000000;
+}
+.form-group button:hover {
+    background-color: #9c9c9c;
+}
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+}
