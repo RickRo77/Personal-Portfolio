@@ -7,7 +7,7 @@ html
     width: 100vw;
     height: 100vh;
     /* background-color: #9300b8; */
-    background-image: url('./src/4.jpg');
+    background-image: url('../static/4.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -103,7 +103,7 @@ body p
 {
     /* padding: 80px 0; */
     padding-top: 5%;
-    background-image: url('./src/copy.jpg.png');
+    background-image: url('../static/copy.jpg.png');
     background-size: cover;
     display: flex;
     flex-direction: row;
@@ -127,7 +127,7 @@ body p
     height: 55vh;
     width: 60vw;
     margin: 2%;
-    /* background-image: url('./src/pink.jpg'); */
+    /* background-image: url('../static/pink.jpg'); */
     background-color: rgb(250, 76, 177);
     background-size: cover;
     opacity: 0;
@@ -248,7 +248,7 @@ body p
 #projects
 { 
     display: flex; align-items:center; flex-direction: column;
-    background-image: url('./src/2.jpg'),url('./src/adad.png'); 
+    background-image: url('../static/2.jpg'),url('../static/adad.png'); 
     background-blend-mode:lighten;
     background-size: cover;
 }
