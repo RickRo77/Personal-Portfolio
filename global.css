@@ -2,6 +2,10 @@ html
 {
     scroll-behavior: smooth;
 }
+body
+{
+    color: #fff;
+}
 #header
 {
     width: 100vw;
